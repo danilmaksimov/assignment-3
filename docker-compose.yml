@@ -1,0 +1,15 @@
+services:
+  assignment_3:
+    image: assignment_3
+    container_name: assignment_3
+    restart: "no"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: local
+    ports:
+      - "5555:80"
+
+networks:
+  default:
+    name: assignment_3
